@@ -1,1 +1,1 @@
-# resource_management
+# resource_management project
