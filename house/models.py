@@ -27,7 +27,7 @@ class HouseType(models.Model):
 class House(models.Model):
     house_name = models.CharField( max_length = 255 )    
     plot_number = models.ForeignKey( Plot, on_delete = models.CASCADE, null = False )
-    house_type = models.ForeignKey( HouseType, on_delete = models.CASCADE  null = False)
+    house_type = models.ForeignKey( HouseType, on_delete = models.CASCADE, null = False)
 
     updated_on = models.DateTimeField( auto_now = True)
     created_on = models.DateTimeField( auto_now_add = True)
@@ -48,7 +48,7 @@ class Room(models.Model):
     room_name = models.CharField( max_length = 255 )
     room_description = models.TextField( null = True)
     kplc_meter_number = models.CharField( max_length = 255 )    
-    room_type = models.ForeignKey( HouseType, on_delete = models.CASCADE  null = False)
+    room_type = models.ForeignKey( HouseType, on_delete = models.CASCADE, null = False)
 
     updated_on = models.DateTimeField( auto_now = True)
     created_on = models.DateTimeField( auto_now_add = True)
@@ -61,12 +61,13 @@ class Tenant(models.Model):
     id_number = models.CharField( max_length = 255 )
     last_name = models.CharField( max_length = 255 )
     first_name = models.CharField( max_length = 255 )    
-    middle_name = models.CharField( max_length = 255 null = True )
+    id_card_back_image = models.ImageField( upload_to='id_card' )
+    id_card_front_image = models.ImageField( upload_to='id_card' )
+    middle_name = models.CharField( max_length = 255, null = True )
     passport_size_photo = models.ImageField( upload_to='passport' )
-    phone_number = models.CharField( max_length = 255 null = True )
-    email_address = models.CharField( max_length = 255 null = True )
-    id_card_back_image = passport_size_photo = models.ImageField( upload_to='id_card' )
-    id_card_front_image = passport_size_photo = models.ImageField( upload_to='id_card' )
+    phone_number = models.CharField( max_length = 255, null = True )
+    email_address = models.CharField( max_length = 255, null = True )
+    
     
     updated_on = models.DateTimeField( auto_now = True)
     created_on = models.DateTimeField( auto_now_add = True)
