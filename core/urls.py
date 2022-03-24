@@ -1,3 +1,6 @@
-from django.urls import URLPattern, path
+from core import views
+from django.urls import path
 
-urlpatterns = []
+urlpatterns = [
+    path('', views.dashboard, name='index-page'),
+]
