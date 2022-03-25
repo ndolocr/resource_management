@@ -1,13 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link type="text/css" rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+        <link type="text/css" rel="stylesheet" href="{% static 'assets/bootstrap-4.0.0-dist/css/bootstrap.min.css'%}">
     </head>
     <body>
-        Navbar
+        {% include 'layout/top_nav.html' %}
         <hr>
+        {% include 'layout/left_nav.html' %}
         {% block content %} {% endblock %}
         <hr>
-        Footer
+        {% include 'layout/footer.html' %}
     </body>
+
+    <!-- Including Javascrip Files -->
+    <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap-4.0.0-dist/js/bootstrap.min.js' %}"></script>
 </html>
