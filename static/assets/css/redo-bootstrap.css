@@ -12,3 +12,9 @@
 .main-content{
     background: #FFFFFF;
 }
+
+.page-bread-crumbs{
+    padding: 10px;
+    color: #888888;
+    border-bottom: 1px solid #e7ecf1;
+}
