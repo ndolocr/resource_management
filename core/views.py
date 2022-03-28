@@ -28,5 +28,9 @@ def user_login(request):
         return render(request, 'core/login.html', context)
 
 def dashboard(request):
-    return render(request, 'core/dashboard.html')
+    user = request.user
+    context = {
+        "user": user,
+    }
+    return render(request, 'core/dashboard.html', context)
 
