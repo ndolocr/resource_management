@@ -9,10 +9,20 @@
     <body>
         <div class="container-fluid">
             {% include 'layout/top_nav.html' %}
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0">
+                    Left Column - Left Nave
+                    {% include 'layout/left_nav.html' %}
+                </div>
+
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main-content">
+                    {% block content %} {% endblock %}
+                </div>
+
+            </div>
             
-            {% include 'layout/left_nav.html' %}
-            {% block content %} {% endblock %}
-            <hr>
+            
+            
             {% include 'layout/footer.html' %}
         </div>
     </body>
