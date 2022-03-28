@@ -18,8 +18,12 @@
                 <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main-content">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 page-bread-crumbs"> 
-                            {% block bread-crumbs %} {% endblock %} 
+                            {% block bread-crumbs %} {% endblock %}                             
                         </div>
+                        <h4 class="page-title"> 
+                            {% block page-title %} {% endblock %}
+                            <small> {% block page-definition %} {% endblock %}</small>
+                        </h4>
                     </div>
                     {% block content %} {% endblock %}
                 </div>
