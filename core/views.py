@@ -9,12 +9,13 @@ from django.contrib.auth import logout
 from django.contrib.auth import authenticate
 
 # Create your views here.
-def login_view(request):
+def user_login(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
-
-        user = authenticate(request, username, password)
+        print("Username ", username)
+        print("Padssword ", password)
+        user = authenticate(username, password)
 
         if user is not None:
             login(request, user)
