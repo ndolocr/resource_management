@@ -2,9 +2,15 @@
 <!DOCTYPE html>
 <html>
     <head>        
+        <script src="{% static 'assets/js/chart.min.js' %}"></script>
+        
         <link type="text/css" rel="stylesheet" href="{% static 'assets/bootstrap-4.0.0-dist/css/bootstrap.min.css'%}">
         <link type="text/css" rel="stylesheet" href="{% static 'assets/css/main.css' %}">
         <link type="text/css" rel="stylesheet" href="{% static 'assets/css/redo-bootstrap.css' %}">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <div class="container-fluid">
@@ -23,20 +29,28 @@
                         <h4 class="page-title"> 
                             {% block page-title %} {% endblock %}
                             <small> {% block page-definition %} {% endblock %}</small>
-                        </h4>
+                        </h4>                        
                     </div>
-                    {% block content %} {% endblock %}
+                    
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                            <div class="page-content">                                
+                                {% block content %} {% endblock %}                                
+                            </div>                                            
+                        </div>
+                    </div>
+                    
+                    
                 </div>
 
             </div>
             
-            
-            
+                        
             {% include 'layout/footer.html' %}
         </div>
     </body>
 
-    <!-- Including Javascrip Files -->
+    <!-- Including Javascrip Files -->    
     <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
     <script src="{% static 'assets/bootstrap-4.0.0-dist/js/bootstrap.min.js' %}"></script>
 </html>

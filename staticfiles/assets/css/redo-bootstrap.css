@@ -1,0 +1,36 @@
+body{
+    overflow: hidden;
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+    background: #364150;
+    min-height: 100vh;
+}
+
+.user-information{
+    color: #FFFFFF;
+}
+
+.main-content{
+    background: #FFFFFF;
+}
+
+.page-bread-crumbs{
+    padding: 10px;
+    color: #888888;
+    border-bottom: 1px solid #e7ecf1;
+}
+
+.page-title{
+    color: #333333;
+    padding: 10px;
+}
+
+.page-content{
+    color: #555555;
+}
+
+.box{
+    background: #F00;
+}
