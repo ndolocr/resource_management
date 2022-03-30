@@ -19,3 +19,15 @@ def view_all_house_types(request):
 
 def view_all_tenants(request):
     pass
+
+def view_single_house(request):
+    pass
+
+def view_single_plot(request):
+    pass
+
+def view_single_room(request):
+    pass
+
+def view_single_tenant(request):
+    pass
