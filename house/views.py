@@ -1,9 +1,13 @@
 from django.shortcuts import render
 
+from house.models import Plot
 # Create your views here.
 
 def view_all_plots(request):
-    pass
+    plots = Plot.objects.all()
+    
+    context = { "plots": plots }
+    return render(request, "house/all-plots.html", context)
 
 def view_all_houses(request):
     pass
